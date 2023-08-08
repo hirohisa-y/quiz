@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 use App\Http\Controllers\Admin\QuizController;
 Route::controller(QuizController::class)->prefix('admin')->name('admin.')->group(function() {
@@ -27,3 +27,4 @@ Route::controller(QuizController::class)->prefix('admin')->name('admin.')->group
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\Admin\QuizController::class, 'index']);
