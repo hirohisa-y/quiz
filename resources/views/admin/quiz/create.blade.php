@@ -60,7 +60,9 @@
 <label for="option4">選択肢4</label><br>
                         </div>
                     @csrf
-                    <input type="submit" class="btn btn-primary" value="投稿">
+                    <div class="d-flex justify-content-center">
+                      <input type="submit" class="btn btn-primary" style="width:110px;" value="投稿">
+                    </div>
                 </form>
             </div>
         </div>
