@@ -29,7 +29,9 @@
       <button type="button" onclick="checkAnswer('option1')">選択肢1: {{$quiz->option1}}</button>
       <button type="button" onclick="checkAnswer('option2')">選択肢2: {{$quiz->option2}}</button>
       <button type="button" onclick="checkAnswer('option3')">選択肢3: {{$quiz->option3}}</button>
+      @if($quiz->option4)
       <button type="button" onclick="checkAnswer('option4')">選択肢4: {{$quiz->option4}}</button>
+      @endif
     </div>
     
     <p id="answer{{$quiz->id}}" style="display: none;">選択肢: {{$quiz->answer}}</p>
